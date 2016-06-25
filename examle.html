@@ -9,6 +9,7 @@
 </head>
 <body>
 <h2>示例代码</h2>
+<button class="btn btn-success">点我弹出</button>
 
 
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -16,17 +17,19 @@
     <script src="js/dialog.jquery.js"></script>
     <script>
     $(function(){
-            $("body").dialog({
-            width:600,
-            height:"",
-            title:"提示",
-            content:"909090",
-            okBtn:"确定",
-            cancleBtn:"取消",
-            okCallback:"",
-            cancleCallback:"",
-            closeCallback:""
-        });
+    	$(".btn").click(function(){
+		$("body").dialog({
+			width: 600,
+			height: "",
+			title: "提示",
+			content: "此处为提示内容区，可以定义html样式",
+			okBtn: "确定",
+			cancleBtn: "取消",
+			okCallback: "",
+			cancleCallback: "",
+			closeCallback: ""
+		});
+    	})
     })
     </script>
 </body>
