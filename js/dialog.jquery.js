@@ -30,6 +30,9 @@ $.fn.extend({
                                 '</div>'+
                         '</div>';
             var $dHtml=$(dHtml);
+            var objStr=JSON.stringify(obj);
+            console.log(obj)
+            $dHtml.attr("data-obj",objStr)
             // 初始化弹框内容
             $dHtml.find(".title h3").text(obj.title);
             $dHtml.find(".d-content").html(obj.content);

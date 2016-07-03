@@ -17,6 +17,9 @@
     <script src="js/dialog.jquery.js"></script>
     <script>
     $(function(){
+    	var can=function(){
+    		alert("0")
+    	}
     	$(".btn").click(function(){
 		$("body").dialog({
 			width: 600,
@@ -26,7 +29,7 @@
 			okBtn: "确定",
 			cancleBtn: "取消",
 			okCallback: "",
-			cancleCallback: "",
+			cancleCallback:can,
 			closeCallback: ""
 		});
     	})
