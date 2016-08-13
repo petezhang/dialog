@@ -1,0 +1,138 @@
+/*弹框样式*/
+.h-modal{
+position: fixed;width: 100%; height: 100%; top: 0; left: 0;z-index: 1000;
+/*阴影区*/
+.h-mask{position: fixed; width: 100%;height: 100%; top:0; background-color: rgba(0,0,0,0.2); z-index: 1000}
+/*弹窗区*/
+.h-container{width: 400px;background-color: #fff; border-radius: 5px;  position: absolute; z-index: 1000; top: 50%; left: 50%;
+	box-shadow: 0 8px 28px rgba(0,0,0,.3);
+	-webkit-transform: translate(-50%,-50%) scale(0,0);
+    	-ms-transform: translate(-50%,-50%) scale(0,0);
+           transform: translate(-50%,-50%) scale(0,0);
+           transition:transform 0.3s cubic-bezier(0.36,1.1,0.2,1.2);
+           -moz-transition:transform 0.3s cubic-bezier(0.36,1.1,0.2,1.2); /* Firefox 4 */
+	-webkit-transition:transform 0.3s cubic-bezier(0.36,1.1,0.2,1.2); /* Safari and Chrome */
+       }
+ .h-show{
+ 	transition:transform 0.3s;
+           -moz-transition:transform 0.3s; /* Firefox 4 */
+	-webkit-transition:transform 0.3s;
+ }
+
+/*弹窗标题*/
+.h-title{height: 60px; line-height: 60px; padding: 0 30px;border-bottom: 1px solid #eee;
+	&:after{clear:both;content:'';display:block;width: 0;height: 0;visibility:hidden;};
+	.title-text{float: left; width: 90%;
+		h3{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color: #333;font-size: 20px; line-height: 60px; font-weight: normal; margin:0;}
+	}
+	.close-icon{float: right; width: 10%; text-align: right;height: 60px;
+		span{ color: #666;margin-top: 21px; cursor: pointer; display: block; height: 18px; width: 18px;background: url(../img/close.png) center center no-repeat;float: right; background-size: cover;}
+
+	}
+}
+/*弹窗内容*/
+.h-content{padding:20px 30px; color: #666; line-height: 24px;}
+/*弹窗尾部*/
+.h-footer{
+	height: 76px; padding:20px 30px;text-align: right; display: none;border-top: 1px solid #eee;-webkit-box-sizing: border-box;  -moz-box-sizing: border-box;  box-sizing: border-box;
+	button{padding: 0 20px;height: 36px; border: 1px solid #fff; border-radius: 2px;font-family: "microsoft YaHei";cursor: pointer; display: none; font-size: 14px;}
+	.cancel-btn{background: #f7f7f7; border-color: #dcdcdc;  color: #333; margin-right: 10px;}
+	.ok-btn{background: #009ddc;border-color: #009ddc; color: #fff;}
+	.ok-btn:hover{background-color: #00aff6}
+}
+
+/*弹窗显示动画*/
+.showani{
+	-webkit-transform:translate(-50%,-50%) scale(1,1);
+    	-ms-transform:translate(-50%,-50%) scale(1,1);
+           transform:translate(-50%,-50%) scale(1,1);
+           /*opacity: 1;*/
+}
+
+/*弹窗左右抖动动画*/
+.shake{
+	animation:shake 0.3s;
+	-moz-animation:shake 0.3s; /* Firefox */
+	-webkit-animation:shake 0.3s; /* Safari and Chrome */
+	-o-animation:shake 0.3s; /* Opera */
+}
+@keyframes shake{
+	28.6%   {margin-left: -10px;}
+	42.9%  {margin-left: 0px;}
+	57.2%  {margin-left: 10px;}
+	71.5% {margin-left: 0px;}
+	85.8%  {margin-left: -10px;}
+	100% {margin-left: 0px;}
+}
+
+}
+/*tip弹框*/
+.tip-modal{
+position: fixed;width: 100%; height: 100%; top: 0; left: 0;z-index: 1000;
+/*阴影区*/
+.tip-mask{position: fixed; width: 100%;height: 100%; top:0; background-color: rgba(0,0,0,0.2); z-index: 1000}
+/*弹窗区*/
+.tip-container{width: 400px;background-color: #fff; border-radius: 5px; position: absolute; z-index: 1000; top: 50%; left: 50%;
+	box-shadow: 0 8px 28px rgba(0,0,0,.3); padding-top: 30px;
+	-webkit-transform: translate(-50%,-50%) scale(0,0);
+    	-ms-transform: translate(-50%,-50%) scale(0,0);
+           transform: translate(-50%,-50%) scale(0,0);
+           transition:transform 0.3s cubic-bezier(0.36,1.1,0.2,1.2);
+           -moz-transition:transform 0.3s cubic-bezier(0.36,1.1,0.2,1.2); /* Firefox 4 */
+	-webkit-transition:transform 0.3s cubic-bezier(0.36,1.1,0.2,1.2); /* Safari and Chrome */
+       }
+ .tip-show{
+ 	transition:transform 0.3s;
+           -moz-transition:transform 0.3s; /* Firefox 4 */
+	-webkit-transition:transform 0.3s;
+ }
+/*弹窗标题*/
+.tip-title{height: 20px;padding: 0 30px;
+	&:after{clear:both;content:'';display:block;width: 0;height: 0;visibility:hidden;};
+	.title-text{float: left; width: 90%;
+		h3{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; color: #333;font-size: 18px; font-weight: bold;margin:0;}
+	}
+	.close-icon{float: right; width: 10%; text-align: right;
+		span{ color: #666;  cursor: pointer; display: block; height: 18px; width: 18px;background: url(../img/close.png) center center no-repeat;float: right; background-size: cover; }
+	}
+}
+/*弹窗内容*/
+.tip-content{padding:20px 30px 24px 30px; color: #666; line-height: 24px;}
+/*弹窗尾部*/
+.tip-footer{
+	height: 66px; padding: 0 30px;text-align: right; display: none;
+	button{padding: 0 20px;height: 36px;border: 1px solid #fff; border-radius: 2px;font-family: "microsoft YaHei";cursor: pointer; display: none;font-size: 14px;}
+	.cancel-btn{background: #f7f7f7; border-color: #dcdcdc;  color: #333; margin-right: 10px;}
+	.ok-btn{background: #009ddc;border-color: #009ddc; color: #fff;}
+	.ok-btn:hover{background-color: #00aff6}
+}
+/*弹窗显示动画*/
+.showani{
+	-webkit-transform:translate(-50%,-50%) scale(1,1);
+    	-ms-transform:translate(-50%,-50%) scale(1,1);
+           transform:translate(-50%,-50%) scale(1,1);
+           /*opacity: 1;*/
+}
+
+/*弹窗左右抖动动画*/
+.shake{
+	animation:shake 0.3s;
+	-moz-animation:shake 0.3s; /* Firefox */
+	-webkit-animation:shake 0.3s; /* Safari and Chrome */
+	-o-animation:shake 0.3s; /* Opera */
+}
+@keyframes shake{
+	28.6%   {margin-left: -10px;}
+	42.9%  {margin-left: 0px;}
+	57.2%  {margin-left: 10px;}
+	71.5% {margin-left: 0px;}
+	85.8%  {margin-left: -10px;}
+	100% {margin-left: 0px;}
+}
+}
+.overflow{
+overflow-y: hidden;
+}
+.tip-overflow{
+overflow-y: hidden;
+}

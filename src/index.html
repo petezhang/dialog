@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog使用示例</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/hconfirm.min.css">
+</head>
+<body>
+<h2>示例代码</h2>
+<button class="btn btn-success">点我弹出</button>
+
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/hconfirm.min.js"></script>
+    <script>
+    $(function(){
+    	var can=function(){
+    		alert("0")
+    	}
+    	$(".btn").click(function(){
+		$("body").hConfirm({
+			width: 600,
+			height: "",
+			title: "提示",
+			content: "此处为提示内容区，可以定义html样式",
+			okBtn: "确定",
+			cancleBtn: "取消",
+			okCallback: "",
+			cancleCallback:can,
+			closeCallback: ""
+		});
+    	})
+    })
+    </script>
+</body>
+</html>
